@@ -14,9 +14,9 @@ import { useState } from 'react';
 export default function LoginModal() {
     // 패러랠 모달 패러랠 라우트 같은 폴더 안에있는 2개의 페이지를 동시에 보여준다\
     //(.):경로 i폴더명 패러랠 라우트  인터셉트 라우팅
-    const [id, setId] = useState();
-    const [password, setPassword] = useState();
-    const [message, setMessage] = useState();
+    const [id, setId] = useState('');
+    const [password, setPassword] = useState('');
+    const [message, setMessage] = useState('');
 
     const onSubmit = () => {};
     const onClickClose = () => {};
