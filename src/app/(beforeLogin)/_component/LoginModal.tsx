@@ -1,10 +1,19 @@
 'use client'
 //서버 컴포넌트에서는 훅을 사용못해서 클라이언트 컴포넌트로 바꿔줘야된다 
 
-import styles from '@/app/(beforeLogin)/@modal/login.module.css'
+//주소창에안뜸
+//(afterLogin) :그룹폴더는 레이아웃 
+//@modal: 패러랠라우터 한화면에 두개의 페이지를 보여주는거
+//_compoent :프라이빗 폴더 폴더 정리용 공통파일
+//클라이언트 컴포넌트는 서버컨포넌트를 임포트 하면 안됨 
+//서버 컨포넌트는 클라이언트 컨포넌트를 임포트할수있음
+import styles from '@/app/(beforeLogin)/_component/login.module.css'
 import { useState } from 'react';
-export default function Page() {
-    // 패러랠 모달 패러랠 라우트 같은 폴더 안에있는 2개의 페이지를 동시에 보여준다 
+
+
+export default function LoginModal() {
+    // 패러랠 모달 패러랠 라우트 같은 폴더 안에있는 2개의 페이지를 동시에 보여준다\
+    //(.):경로 i폴더명 패러랠 라우트  인터셉트 라우팅
     const [id, setId] = useState();
     const [password, setPassword] = useState();
     const [message, setMessage] = useState();
